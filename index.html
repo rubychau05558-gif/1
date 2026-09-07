@@ -693,6 +693,28 @@
             max-width: 380px;
         }
     }
+    /* Đưa toàn bộ trang về tràn viền không lề */
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden; /* Ẩn thanh cuộn trình duyệt */
+        background-color: #000; /* Nền đen chống chói */
+    }
+
+    /* Ép container/khung chứa chính của Game phủ kín màn hình */
+    #game-container, .game-wrapper, body > div:first-child {
+        width: 100vw !important;
+        height: 100vh !important;
+        max-width: none !important;
+        max-height: none !important;
+        object-fit: cover; /* Hoặc object-fit: contain nếu muốn giữ nguyên tỉ lệ khung hình */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
 
     </style>
 </head>
